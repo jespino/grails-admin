@@ -30,7 +30,7 @@ class App
                             return elm
                     }
                 else
-                    throw new Error(viewsName + ' does not exist')
+                    throw new Error("#{viewsName} does not exist")
 
     exec: (moduleName) ->
         fn = Injector.get(moduleName)
@@ -50,7 +50,7 @@ class App
     load:
         fns: = []
         exec: ->
-            for func in @.configure.fns
+            for func in @.load.fns
                 func()
 
         onLoad: (fn) ->
