@@ -1,6 +1,23 @@
 package net.kaleidos.plugins.admin.widget
 
+import groovy.xml.MarkupBuilder
+
 class NumberInputWidget extends InputWidget{
+    @Override
+    String render() {
+        def writer = new StringWriter()
+        def builder = new MarkupBuilder(writer)
+
+        def attrs = htmlAttrs.clone()
+
+        attrs << ["data-type": "integer"]
+        attrs << ["value": (value!=null)?value:""]
+
+        builder.input(attrs)
+
+        return writer
+    }
+
     NumberInputWidget() {
         inputType = "number"
     }

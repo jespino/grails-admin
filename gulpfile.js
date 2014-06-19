@@ -36,8 +36,7 @@ gulp.task('libs', function () {
               'front/dist/lib/jQuery.serializeObject/jquery.serializeObject.js',
               'front/dist/lib/jquery/dist/jquery.js',
               'front/dist/lib/injectorJS/src/injector.js',
-              'front/dist/lib/parsleyjs/dist/parsley.js',
-              'front/dist/lib/parsleyjs/dist/parsley.remote.js'])
+              'front/dist/lib/checksley/checksley.js'])
         .pipe(gulp.dest(path.libsDir));
 });
 

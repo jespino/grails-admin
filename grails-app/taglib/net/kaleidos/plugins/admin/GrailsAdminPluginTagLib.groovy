@@ -189,7 +189,7 @@ class GrailsAdminPluginTagLib {
             result << 'grails-admin/libs/lodash.js'
             result << 'grails-admin/libs/bootstrap/js/bootstrap.js'
             result << 'grails-admin/libs/injector.js'
-            result << 'grails-admin/libs/parsley.remote.js'
+            result << 'grails-admin/libs/checksley.js'
             result << 'grails-admin/libs/jquery.serializeObject.js'
             result << 'grails-admin/libs/handlebars.js'
             result << 'grails-admin/js/main.js'

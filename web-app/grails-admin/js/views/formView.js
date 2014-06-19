@@ -1,7 +1,7 @@
 app.view('formView', ['$el'], function ($el) {
     "use strict";
 
-    $el.parsley({
+    $el.checksley({
         errorClass: "has-error",
         classHandler: function(el) {
             return el.$element.closest(".form-group");
@@ -30,14 +30,14 @@ app.view('formView', ['$el'], function ($el) {
         $el.submit();
     });
 
-    $el.find('.validate-form').parsley({
-        errorClass: "has-error",
-        classHandler: function(el) {
-            return el.$element.closest(".form-group");
-        },
-        errorsWrapper: "<span class='help-block'></span>",
-        errorTemplate: "<span></span>"
-    });
+    // $el.find('.validate-form').checksley({
+    //     errorClass: "has-error",
+    //     classHandler: function(el) {
+    //         return el.$element.closest(".form-group");
+    //     },
+    //     errorsWrapper: "<span class='help-block'></span>",
+    //     errorTemplate: "<span></span>"
+    // });
 });
 
 app.configure.addConfiguration(function () {
